@@ -18,15 +18,22 @@ function extractImagesFromPage() {
     const images = new Set();
     
     try {
-        // Find all img elements with Flaticon URLs
-        document.querySelectorAll('img').forEach(img => {
+        // Find the container with id pack-view__inner
+        const container = document.getElementById('pack-view__inner');
+        if (!container) {
+            console.log('[Flaticon Downloader] Container pack-view__inner not found');
+            return Array.from(images);
+        }
+        
+        // Find all img elements with Flaticon URLs within the container
+        container.querySelectorAll('img').forEach(img => {
             if (img.src && (img.src.includes('flaticon') || img.src.includes('cdn-icons'))) {
                 images.add(img.src);
             }
         });
         
-        // Find images in picture elements
-        document.querySelectorAll('picture source').forEach(source => {
+        // Find images in picture elements within the container
+        container.querySelectorAll('picture source').forEach(source => {
             if (source.srcset) {
                 const urls = source.srcset.match(/https?:\/\/[^\s]+/g) || [];
                 urls.forEach(url => {
@@ -37,8 +44,8 @@ function extractImagesFromPage() {
             }
         });
         
-        // Find images in background styles
-        document.querySelectorAll('[style*="background-image"]').forEach(el => {
+        // Find images in background styles within the container
+        container.querySelectorAll('[style*="background-image"]').forEach(el => {
             const match = el.style.backgroundImage.match(/url\(['"]?([^'")]+)['"]?\)/);
             if (match && match[1] && (match[1].includes('flaticon') || match[1].includes('cdn-icons'))) {
                 images.add(match[1]);

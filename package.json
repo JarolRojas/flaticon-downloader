@@ -1,6 +1,6 @@
 {
   "name": "flaticon-downloader-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chrome extension to automatically download all icons from Flaticon pages as a ZIP file",
   "author": "Jarol Rojas",
   "license": "MIT",

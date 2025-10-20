@@ -122,15 +122,22 @@ function extractImagesFromPage() {
     const images = new Set();
     
     try {
-        // Find all img elements
-        document.querySelectorAll('img').forEach(img => {
+        // Find the container with id pack-view__inner
+        const container = document.getElementById('pack-view__inner');
+        if (!container) {
+            console.log('Container pack-view__inner not found');
+            return Array.from(images);
+        }
+        
+        // Find all img elements within the container
+        container.querySelectorAll('img').forEach(img => {
             if (img.src && img.src.includes('flaticon')) {
                 images.add(img.src);
             }
         });
 
-        // Find in picture elements
-        document.querySelectorAll('picture source').forEach(source => {
+        // Find in picture elements within the container
+        container.querySelectorAll('picture source').forEach(source => {
             if (source.srcset) {
                 const matches = source.srcset.match(/https?:\/\/[^\s]+/g) || [];
                 matches.forEach(url => {
@@ -141,8 +148,8 @@ function extractImagesFromPage() {
             }
         });
 
-        // Find in CSS backgrounds
-        document.querySelectorAll('[style*="background-image"]').forEach(el => {
+        // Find in CSS backgrounds within the container
+        container.querySelectorAll('[style*="background-image"]').forEach(el => {
             const match = el.style.backgroundImage.match(/url\(['"]?([^'")]+)['"]?\)/);
             if (match && match[1] && match[1].includes('flaticon')) {
                 images.add(match[1]);

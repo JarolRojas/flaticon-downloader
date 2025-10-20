@@ -109,7 +109,7 @@ Este es software de código abierto (Open Source). Puedes:
 
 ---
 
-**Versión:** 1.0.0  
+**Versión:** 1.1.0  
 **Última actualización:** 20 de Octubre de 2025  
 **Licencia:** MIT (ver LICENSE)
 

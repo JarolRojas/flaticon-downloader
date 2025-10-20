@@ -1,9 +1,9 @@
-# 📋 Resumen de Mejoras - Flaticon Downloader v1.0.0
+# 📋 Resumen de Mejoras - Flaticon Downloader v1.1.0
 
 ## ✅ Mejoras Realizadas
 
 ### 1. **manifest.json** (Actualizado)
-- ✅ Versión actualizada a **1.0.0**
+- ✅ Versión actualizada a **1.1.0**
 - ✅ Descripción mejorada y más descriptiva
 - ✅ Agregado permiso de **downloads** 
 - ✅ Host permissions específicos para:
@@ -13,7 +13,7 @@
 - ✅ Especificado `minimum_chrome_version: 88`
 
 ### 2. **package.json** (Mejorado)
-- ✅ Versión actualizada a **1.0.0**
+- ✅ Versión actualizada a **1.1.0**
 - ✅ Agregado campo `homepage`
 - ✅ Keywords expandidos: agregadas "icons" y "design-tools"
 - ✅ Scripts npm agregados (build y test)
@@ -31,7 +31,7 @@
 - ✅ Sección de **Roadmap** agregada
 - ✅ Sección de **Soporte** agregada
 - ✅ Sección de **Recursos** agregada
-- ✅ Versión actualizada a **1.0.0**
+- ✅ Versión actualizada a **1.1.0**
 
 ### 4. **popup.html** (Corregido)
 - ✅ Error en SVG corregido: removido espacio en blanco en `v 3.293c`
@@ -99,7 +99,7 @@
 
 ## 📊 Comparación Versiones
 
-| Aspecto | v1.0 | v1.0.0 |
+| Aspecto | v1.0 | v1.1.0 |
 |---------|------|--------|
 | Descripción | Básica | Completa y atractiva |
 | Permisos | Genéricos | Específicos y seguros |
@@ -129,6 +129,6 @@ El proyecto ahora está:
 
 ---
 
-**Versión:** 1.0.0  
+**Versión:** 1.1.0  
 **Última revisión:** Octubre 2025  
 **Estado:** ✅ Completamente mejorado y listo
