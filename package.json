@@ -1,0 +1,32 @@
+{
+  "name": "flaticon-downloader-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension to automatically download all icons from Flaticon pages as a ZIP file",
+  "author": "Jarol Rojas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JarolRojas/flaticon-downloader"
+  },
+  "homepage": "https://github.com/JarolRojas/flaticon-downloader",
+  "keywords": [
+    "chrome-extension",
+    "flaticon",
+    "icon-downloader",
+    "zip",
+    "automation",
+    "icons",
+    "design-tools"
+  ],
+  "manifest": {
+    "version": 3,
+    "minimum_chrome_version": "88"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "echo 'Extension ready to load in Chrome'",
+    "test": "echo 'No tests specified'"
+  }
+}

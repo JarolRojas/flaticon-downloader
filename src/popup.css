@@ -1,0 +1,317 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 400px;
+    height: auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* GitHub Button */
+.github-btn {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1000;
+}
+
+.github-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Container */
+.container {
+    text-align: center;
+    height: auto;
+    padding: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 600px;
+}
+
+.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Typography */
+h1 {
+    margin: 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+}
+
+.description {
+    font-size: 13px;
+    margin-bottom: 16px;
+    opacity: 0.95;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Icon */
+.icon {
+    font-size: 44px;
+    margin-bottom: 3px;
+}
+
+/* Links */
+a {
+    color: #e0e7ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.download-btn,
+.cancel-btn,
+.save-btn {
+    border: none;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 4px;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.download-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.download-btn:active:not(:disabled) {
+    transform: translateY(0px);
+}
+
+.download-btn:disabled {
+    background: #9e9e9e;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.cancel-btn {
+    background: linear-gradient(135deg, #f44336, #e53935);
+    font-size: 13px;
+    padding: 9px 18px;
+}
+
+.cancel-btn:hover {
+    background: linear-gradient(135deg, #e53935, #d32f2f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, #1976D2, #1565C0);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+/* Naming Section */
+.naming-section {
+    margin: 12px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.folder-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.folder-input {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s ease;
+}
+
+.folder-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
+
+/* Status */
+.status {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    min-height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-text {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.status-text.success {
+    color: #59f05e;
+    font-weight: bold;
+}
+
+.status-text.error {
+    color: #f44336;
+}
+
+.status-text.warning {
+    color: #ff9800;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Stats Section */
+.stats-section {
+    margin-top: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.stats-section h3 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.size-stat {
+    grid-column: 1 / 3;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(2px);
+}
+
+.stat-item.success {
+    border-left-color: #4CAF50;
+}
+
+.stat-item.error {
+    border-left-color: #f44336;
+}
+
+.stat-number {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.stat-label {
+    font-size: 11px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

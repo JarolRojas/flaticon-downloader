@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Descargador de Iconos Flaticon",
+    "version": "1.0.0",
+    "description": "Descarga automáticamente todos los iconos de Flaticon de una página web en un archivo ZIP",
+    "icons": {
+        "16": "assets/icons/icon-16.png",
+        "48": "assets/icons/icon-48.png",
+        "128": "assets/icons/icon-128.png"
+    },
+    "action": {
+        "default_popup": "src/popup.html",
+        "default_icon": {
+            "16": "assets/icons/icon-16.png",
+            "48": "assets/icons/icon-48.png",
+            "128": "assets/icons/icon-128.png"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.flaticon.com/*", "https://*.flaticon.com/*"],
+            "js": ["src/content.js"]
+        }
+    ],
+    "host_permissions": [
+        "*://*.flaticon.com/*",
+        "*://cdn-icons-png.flaticon.com/*",
+        "https://github.com/*"
+    ],
+    "minimum_chrome_version": "88"
+}
